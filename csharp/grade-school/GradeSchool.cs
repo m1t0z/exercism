@@ -1,20 +1,39 @@
-using System;
 using System.Collections.Generic;
+using System.Linq;
 
 public class GradeSchool
 {
+    private class Item
+    {
+      public string Student;
+      public int Grade;
+    };
+
+    private readonly List<Item> _items = new List<Item>();
+
     public void Add(string student, int grade)
     {
-        throw new NotImplementedException("You need to implement this function.");
+      _items.Add(new Item
+          {
+            Student = student,
+            Grade = grade
+          }
+      );
     }
 
     public IEnumerable<string> Roster()
     {
-        throw new NotImplementedException("You need to implement this function.");
+      return _items
+        .OrderBy(i => i.Grade)
+        .ThenBy(i => i.Student)
+        .Select(i => i.Student);
     }
 
     public IEnumerable<string> Grade(int grade)
     {
-        throw new NotImplementedException("You need to implement this function.");
+        return _items
+          .Where(i => i.Grade == grade)
+          .OrderBy(i => i.Student)
+          .Select(i => i.Student);
     }
 }
