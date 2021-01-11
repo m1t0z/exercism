@@ -1,2 +1,8 @@
+# .net
 bin/
 obj/
+
+# dart
+.packages
+pubspec.lock
+.dart_tool/
