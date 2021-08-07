@@ -9,3 +9,9 @@ pubspec.lock
 
 # flutter
 build/
+
+# python
+__pycache__/
+
+# vim artifacts
+.vim/
