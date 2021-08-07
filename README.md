@@ -5,4 +5,6 @@ Track of the accomplished by me exercises from [Exercism](https://exercism.io) p
 Languages:
 - [C#](csharp/index.md)
 - [Dart](dart/index.md)
+- [Python](python/index.md)
+
 
